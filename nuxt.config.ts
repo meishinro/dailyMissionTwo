@@ -5,4 +5,16 @@ export default defineNuxtConfig({
   css: [
     '@/assets/stylesheets/all.scss', 
   ],
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: `
+          @import "bootstrap/scss/functions";
+          @import "bootstrap/scss/variables";
+          `,
+        },
+      },
+    },
+  },
 })
